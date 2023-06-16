@@ -11,23 +11,24 @@ const Card = (props) => {
     classnames.push("active");
   }
 
-  const handleMouseEnter = () => {
+  const onMouseEnter = () => {
     props.onMouseEnter(props.value);
   };
 
   return (
     <div className={classnames.join(" ")}>
-      <div onMouseEnter={handleMouseEnter} className="hover_card">
+      <div onMouseEnter={onMouseEnter} className="hover_card">
         <Image
         src={imageProps.src}
         alt={imageProps.alt}
         width={imageProps.width}
         height={imageProps.height}
          />
+         {props.title}
       </div>
-      <title>
-        {props.title}
-      </title>  
+      
+        
+       
       <div className="card_content">
         {props.children}
       </div>

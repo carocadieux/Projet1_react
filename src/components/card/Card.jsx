@@ -12,7 +12,8 @@ const Card = (props) => {
   }
 
   const onMouseEnter = () => {
-    props.onMouseEnter(props.value);
+    //console.log("mouse enter event")
+    props.onHover(props.value);
   };
 
   return (
@@ -23,10 +24,11 @@ const Card = (props) => {
         alt={imageProps.alt}
         width={imageProps.width}
         height={imageProps.height}
+        
          />
-         {props.title}
+        
       </div>
-      
+      {props.title}
         
        
       <div className="card_content">

@@ -14,20 +14,33 @@ import Staryu from "../../assets/Staryu.png";
 import Tentacruel from "../../assets/Tentacruel.png";
 
 
-const NO_CARD_HOVERED = 0;
+const ID_CARD_HOVERED = 0;
 
 const Cards = () => {
-  const [active, setActive] = useState(NO_CARD_HOVERED);
-  
-  
+  const [active, setActive] = useState(ID_CARD_HOVERED);
 
-  const onMouseLeave = (index) => {
-    if (index === active) {
-      setActive(NO_CARD_HOVERED);
-      return;
-    }
+ 
+
+  const onMouseHover = (index) => {
+  
     setActive(index);
   };
+
+
+  const onMouseLeave = (index) => {
+      if (index === active) {
+        setActive(ID_CARD_HOVERED);
+        return;
+      }
+      active(index);
+    };
+   
+    
+  
+
+
+
+
 
 
   return (
@@ -35,14 +48,18 @@ const Cards = () => {
       <Card
         value={1}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
+        
         image={{
+            
             src: Squirtle,
             alt: "Squirtle",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
-        title="Squirtle"
+        
+        title= "Squirtle"
       >
         
         Torrent
@@ -51,12 +68,13 @@ const Cards = () => {
       <Card
         value={2}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
         image={{
             src: Meowth,
             alt: "Meowth",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
         title="Meowth"
       >
@@ -67,129 +85,139 @@ const Cards = () => {
       <Card
         value={3}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
         image={{
             src: Dewgong,
             alt: "Dewgong",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
         title="Dewgong"
       >
         
-        Unnerve
+        Ice Body
       </Card>
 
       <Card
         value={4}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
         image={{
             src: Horsea,
             alt: "Horsea",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
         title="Horsea"
       >
         
-        Unnerve
+        Swift Swim
       </Card>
 
       <Card
         value={5}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
         image={{
             src: Krabby,
             alt: "Krabby",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
         title="Krabby"
       >
         
-        Unnerve
+        Hypper Cutter
       </Card>
 
       <Card
         value={6}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
         image={{
             src: Parasect,
             alt: "Parasect",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
         title="Parasect"
       >
         
-        Unnerve
+        Effect Spore
       </Card>
 
       <Card
         value={7}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
         image={{
             src: Ponyta,
             alt: "Ponyta",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
         title="Ponyta"
       >
         
-        Unnerve
+        Flame Body
       </Card>
 
       <Card
         value={8}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
         image={{
             src: Seaking,
             alt: "Seaking",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
         title="Seaking"
       >
         
-        Unnerve
+        Ligthning Rod
+        
+        
       </Card>
 
       <Card
         value={9}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
         image={{
             src: Staryu,
             alt: "Staryu",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
         title="Staryu"
       >
         
-        Unnerve
+        Illuminate
       </Card>
 
       <Card
         value={10}
         active={active}
-        onHover={onMouseLeave}
+        onHover={onMouseHover}
+        onLeave={onMouseLeave}
         image={{
             src: Tentacruel,
             alt: "Tentacruel",
-            width: "100px",
-            height: "100px",
+            width: "200px",
+            height: "200px",
         }}
         title="Tentacruel"
       >
         
-        Unnerve
+        Clear Body
       </Card>
 
       </div>

@@ -9,27 +9,37 @@ const Card = (props) => {
 
   if (props.value === props.active) {
     classnames.push("active");
-  }
+  } 
+
+  
 
   const onMouseEnter = () => {
-    //console.log("mouse enter event")
     props.onHover(props.value);
   };
 
+  const onMouseLeave = () => {
+    props.onLeave(props.value);
+  };
+
+  
+
   return (
     <div className={classnames.join(" ")}>
-      <div onMouseEnter={onMouseEnter} className="hover_card">
+      <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className="hover_card">
+        
+        
+
         <Image
         src={imageProps.src}
         alt={imageProps.alt}
         width={imageProps.width}
         height={imageProps.height}
         
-         />
+        />
         
       </div>
-      {props.title}
-        
+      
+      {props.title} 
        
       <div className="card_content">
         {props.children}

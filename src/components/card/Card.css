@@ -2,3 +2,13 @@
     max-height: 0;
     overflow: hidden;
   }
+
+
+.card.active .card_content {
+    max-height: 100%;
+}
+
+.card{
+    text-align: center;
+    border: 0.2rem solid rgb(217, 189, 214);
+}

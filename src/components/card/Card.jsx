@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "../image/Image";
+import Title from "../title/Title";
 import "./Card.css";
 
 const Card = (props) => {
@@ -39,7 +40,7 @@ const Card = (props) => {
         
       </div>
       
-      {props.title} 
+      <Title>{props.title}</Title> 
        
       <div className="card_content">
         {props.children}

@@ -1,6 +1,7 @@
 .card_content {
     max-height: 0;
     overflow: hidden;
+    color: rgb(172, 105, 235);
   }
 
 
@@ -10,5 +11,6 @@
 
 .card{
     text-align: center;
-    border: 0.2rem solid rgb(217, 189, 214);
+    border: 1.5px solid rgb(172, 105, 235);
+    border-radius: 2rem;
 }

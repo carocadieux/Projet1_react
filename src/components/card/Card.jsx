@@ -28,14 +28,11 @@ const Card = (props) => {
     <div className={classnames.join(" ")}>
       <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className="hover_card">
         
-        
-
         <Image
         src={imageProps.src}
         alt={imageProps.alt}
         width={imageProps.width}
         height={imageProps.height}
-        
         />
         
       </div>

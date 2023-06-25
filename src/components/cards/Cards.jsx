@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Card from "../card/Card";
-
 import "./Cards.css";
 import Squirtle from "../../assets/Squirtle.png";
 import Meowth from "../../assets/Meowth.png";
@@ -22,7 +21,6 @@ const Cards = () => {
  
 
   const onMouseHover = (index) => {
-  
     setActive(index);
   };
 
@@ -33,16 +31,10 @@ const Cards = () => {
         return;
       }
       active(index);
-    };
+  };
    
     
   
-
-
-
-
-
-
   return (
     <div className="cards">
       <Card
@@ -58,7 +50,7 @@ const Cards = () => {
             width: "200px",
             height: "200px",
         }}
-        
+
         title= "Squirtle"
       >
         
@@ -220,7 +212,7 @@ const Cards = () => {
         Clear Body
       </Card>
 
-      </div>
+    </div>
   );
 };
 

@@ -11,9 +11,7 @@ function App() {
       <Container className="container">
         <Cards />
       </Container>
-    
-     
-      
+        
   );
 }
 
